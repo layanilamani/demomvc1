@@ -1,0 +1,34 @@
+﻿@{
+    string[]  batches = { "ipro-201805E", "ipro-201505E", "ipro-201209E" };
+    
+}
+
+@Html.ActionLink("Please sign in", "ActionName","ControllerName")
+
+@using (Html.BeginForm())
+{
+    <table class="table table-bordered table-striped">
+        <tr>
+            <td>Name</td>
+            <td>@Html.TextBox("Name")</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>@Html.TextBox("Email")</td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>@Html.Password("Password")</td>
+        </tr>
+
+        <tr>
+            <td>@Html.Label("Batches")</td>
+            <td>@Html.DropDownList("BatchId") </td>
+        </tr>
+
+
+        <tr>
+            <td colspan="2"><input type="submit" name="name" value="Submit" /></td>
+        </tr>
+    </table>
+}
